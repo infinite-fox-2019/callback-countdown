@@ -1,7 +1,15 @@
 const { displayCountdown } = require("./views");
 
 const timer = seconds => {
-  // Your code here...
+  let countDown = setInterval(function () {
+
+    if (seconds >= 0) {
+      displayCountdown(seconds--)
+    } else {
+      clearInterval(countDown)
+    }
+  }, 1000)
+
 };
 
 module.exports = {
