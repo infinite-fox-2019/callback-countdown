@@ -8,12 +8,13 @@ const timer = seconds => {
       clearInterval(myVar)
     }
     else{
-      displayCountdown(seconds)
+      let menit = Math.floor(seconds/60)
+      let detik = seconds % 60
+      displayCountdown(menit, detik)
       seconds--
     }
   } , 1000)
 };
-
 
 module.exports = {
   timer
