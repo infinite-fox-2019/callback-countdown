@@ -12,7 +12,7 @@ const displayCountdown = (seconds) => {
   if(seconds < 10) {
     seconds = '0' + seconds;
   }
-  console.log(chalk.cyan(figlet.textSync("Countdown App")));
+  console.log(chalk.yellow(figlet.textSync("Countdown App")));
   console.log(chalk.cyan(figlet.textSync(minutes + ':' + seconds)));
 };
 
