@@ -7,14 +7,14 @@ const timer = seconds => {
       displayCountdown(seconds);
       clearInterval(play);
     } else {
-      displayCountdown(seconds);
+      let minute = Math.floor(seconds/60);
+      let detik = seconds%60;
+      displayCountdown(minute, detik);
       seconds--;
     }
   },500)
 };
-// const timer = function(seconds) {
 
-// }
 module.exports = {
   timer
 };
