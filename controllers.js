@@ -11,7 +11,7 @@ const timer = (seconds) => {
 
       seconds--
     }
-  }, 500);
+  }, 1000);
 
 };
 module.exports = {
