@@ -9,7 +9,12 @@ const displayCountdown = (minute, seconds) => {
     } else {
         clear();
         console.log(chalk.yellow.bold(figlet.textSync("Ayo Menghitung")));
+        if (minute <= 9) {
+        console.log(chalk.blue.bold(figlet.textSync(`0${minute} : ${seconds}`)));
+        }
+        else {
         console.log(chalk.blue.bold(figlet.textSync(`${minute} : ${seconds}`)));
+        }
     }
 };
 
