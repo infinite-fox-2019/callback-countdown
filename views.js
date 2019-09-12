@@ -8,7 +8,7 @@ const displayCountdown = seconds => {
   console.log(chalk.cyan(figlet.textSync("Countdown App")));
   var date = new Date(null);
   date.setSeconds(seconds); // specify value for SECONDS here
-  var timeString = date.toISOString().substr(11, 8);
+  var timeString = date.toISOString().substr(14, 5);
   console.log(chalk.cyan(figlet.textSync(timeString)));
   // Your code here...
 };
