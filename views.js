@@ -7,7 +7,22 @@ const displayCountdown = seconds => {
   let menit = Math.floor(seconds/60);
   let detik = seconds%60
   console.log(chalk.cyan(figlet.textSync("Countdown App")));
-  console.log(chalk.cyan(figlet.textSync(`${menit} : ${detik}`)));
+  if(menit<10){
+    if(detik<10){
+      console.log(chalk.cyan(figlet.textSync(`0${menit} : 0${detik}`)));
+    }
+    else{
+      console.log(chalk.cyan(figlet.textSync(`0${menit} : ${detik}`)));
+    }
+  }
+  else{
+    if(detik<10){
+      console.log(chalk.cyan(figlet.textSync(`${menit} : 0${detik}`)));
+    }
+    else{
+      console.log(chalk.cyan(figlet.textSync(`${menit} : ${detik}`)));
+    }
+  }
 };
 
 module.exports = { displayCountdown };
