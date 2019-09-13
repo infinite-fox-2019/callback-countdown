@@ -4,8 +4,17 @@ const chalk = require("chalk");
 
 const displayCountdown = seconds => {
   clear();
-  console.log(chalk.cyan(figlet.textSync("Countdown App")));
-  // Your code here...
+  let mnt = Math.floor(seconds/60)
+  if (mnt < 10) {
+    mnt = `0${mnt}`
+  }
+  let dtk = Math.round(seconds%60)
+  if (dtk < 10) {
+    dtk = `0${dtk}`
+  }
+  console.log(chalk.cyan(figlet.textSync(seconds)));
+  console.log(chalk.red(figlet.textSync("Countdown App")));
+  
 };
 
 module.exports = { displayCountdown };
